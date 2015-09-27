@@ -1,0 +1,295 @@
+
+/* ====================================================================================
+ *  Project: Test Project
+ *  Author: Andrzej Kałowski
+ *  $id: layout.scss
+ *  =================================================================================== */
+
+/* Common - Layout ==================================================================== */
+
+body {
+  font-family: $primary-font;
+  font-size: $main-font-size;
+  color: $main-color;
+  background-color: $bright-color;
+  margin: 0;
+}
+
+/* Header ============================================================================= */
+/* Header - for resolution up to 767px */
+@include only-phone {
+  h1.header {
+    font-family: $secondary-font;
+    font-size: 5rem;
+    color: $accent-color;
+    background-color: $bright-color;
+    padding-left: 20px;
+  }
+
+  h5.header {
+    font-family: $secondary-font;
+    color: $main-color;
+    background-color: $bright-color;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0px 0px 15px 20px;
+  }
+}
+
+/* Header - for resolution greater than 768px */
+@include up-phone {
+  h1.header {
+    font-family: $secondary-font;
+    color: $accent-color;
+    background-color: $bright-color;
+    padding-left: 20px;
+  }
+
+  h5.header {
+    font-family: $secondary-font;
+    color: $main-color;
+    background-color: $bright-color;
+    font-size: 1.45rem;
+    font-weight: bold;
+    padding: 0px 0px 15px 20px;
+  }
+}
+
+/* News area ========================================================================== */
+#news-area {  
+  background-color: $very-bright-color;
+  @include border-radius-mix(7px);
+}
+
+.news > a > img {
+  float: left;
+  border: 1px solid $dark-color;
+}
+
+/* News area elements for resolution up to 767px */
+@include only-phone {
+  .products {
+      background-color: $accent-color;
+      padding: 15px 5px 15px 5px;
+      margin: 0px -14px 0px -14px;
+      border: 0px;
+      @include border-top-radius(7px);
+  }
+
+  .expansion {
+      background-color: $accent-color;
+      padding: 15px 5px 15px 5px;
+      margin: 0px -14px 0px -14px;
+  }
+
+  .news > h5 {
+      color: $main-color;
+      font-weight: bold;
+      padding-top: 20px;
+      padding-left: 15px;
+  }
+
+  .box-up {
+      @include border-top-radius(7px);
+      padding-bottom: 30px;
+  }
+
+  .box-down {
+      @include border-top-radius(7px);
+      padding-bottom: 30px;
+  }
+
+  .box-down-exp {
+      @include border-top-radius(7px);
+      padding-bottom: 30px;
+      padding-top: 30px;
+  }
+
+  .box-up-phone {
+     @include border-top-radius(7px);
+      padding-left: 15px;
+  }
+
+ .box-down-phone {
+     @include border-top-radius(7px);
+      padding-left: 15px;
+  }
+
+}
+/* End - for resolution up to 767px */
+
+/* News area elements for resolution greater than 768px */
+@include up-phone  {
+  .products {
+      background-color: $accent-color;
+      padding: 15px 5px 15px 5px;
+      margin: 0px -15px 0px -14px;
+      border: 0px;
+      @include border-top-left-radius(7px);
+  }
+
+  .expansion {
+      background-color: $accent-color;
+      padding: 15px 5px 15px 5px;
+      margin: 0px -14px 0px -15px;
+      @include border-top-right-radius(7px);
+  }
+
+  .news > h5 {
+      color: $main-color;
+      font-weight: bold;
+      padding-top: 30px;
+      padding-left: 15px;
+  }
+
+  .box-down {
+      padding-bottom: 40px;
+  }
+
+}
+/* End - for resolution greater than 768px*/
+
+.products > h6 {
+  color: $very-bright-color;
+  font-weight: bold;
+  padding-left: 15px;
+}
+
+.expansion > h6 {
+  color: $very-bright-color;
+  font-weight: bold;
+  padding-left: 15px;
+}
+
+.more {
+    color: $accent-color;
+    padding-right: 10px;
+}
+
+a.more:hover {
+    color: $accent-color;
+    -webkit-text-decoration: none;
+    -moz-text-decoration: none;
+    -ms-text-decoration: none;
+    -o-text-decoration: none;
+    text-decoration: none;
+}
+
+a.more:focus {
+    color: $accent-color;
+    -webkit-text-decoration: none;
+    -moz-text-decoration: none;
+    -ms-text-decoration: none;
+    -o-text-decoration: none;
+    text-decoration: none;
+}
+
+/* Sidebar ============================================================================ */
+#sidebar {
+  font-weight: bold;
+  color: $accent-color;
+  background-color: $bright-color;
+}
+
+#sidebar > div:nth-child(1) {
+  background-color: $very-bright-color;
+  @include border-radius-mix(7px);
+}
+
+#sidebar > div:nth-child(2) {
+  background-color: $very-bright-color;
+  @include border-radius-mix(7px);
+}
+
+#sidebar > div:nth-child(3) {
+  background-color:  $very-bright-color;
+  @include border-radius-mix(7px);
+}
+
+.accent-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: $accent-color;
+    margin: 0px;
+    padding: 15px 15px 15px 15px; 
+}
+
+/* Panel of social media */
+.social-media-inner > a > img {
+    float: left;
+    padding: 15px 0px 15px 15px;
+}
+
+.social-media-inner > p {
+    font-size: 1.2rem;
+    color: $dark-color;
+    padding: 20px 0px 0px 39px;
+}
+
+/* Blocks in the sidebar*/
+.block {
+    margin-bottom: 20px;
+}
+
+.block > div > p:nth-child(1) {
+    margin-top: 15px;
+}
+
+.block > p:nth-child(2) {
+    margin-top: 15px;
+}
+
+.block-inner {
+    font-size: 1.2rem;
+    color: $dark-color;
+    padding-left: 15px;
+}
+
+.block-text{
+    padding-left: 15px; 
+}
+
+a.block-inner:hover {
+    color: $main-color;
+    -webkit-text-decoration: none;
+    -moz-text-decoration: none;
+    -ms-text-decoration: none;
+    -o-text-decoration: none;
+    text-decoration: none;
+}
+
+a.block-inner:focus {
+    color: $main-color;
+    -webkit-text-decoration: none;
+    -moz-text-decoration: none;
+    -ms-text-decoration: none;
+    -o-text-decoration: none;
+    text-decoration: none;
+}
+
+/* Colorbox =========================================================================== */
+#cboxLoadedContent {
+    background: none repeat scroll 0 0 $main-color;
+    padding: 3px;
+}
+
+/* Dotted lines ======================================================================= */
+.bright-dotted-horizontal-line {
+  @include dotted-horizontal-line();
+}
+
+.bright-dotted-vertical-line {
+  @include dotted-vertical-line();
+  padding-bottom: 40px;
+}
+
+.accent-dotted-vertical-line {
+  @include dotted-vertical-line($accent-color, $very-bright-color);
+}
+
+/* Footer ============================================================================= */
+footer {
+  clear: both;
+}
+
+/* Other styles ======================================================================= */

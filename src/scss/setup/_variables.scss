@@ -1,0 +1,23 @@
+
+/* ====================================================================================
+ *  Project: Test Project
+ *  Author: Andrzej Kałowski
+ *  $id: variables.scss
+ *  =================================================================================== */
+
+
+/* Color definitions ================================================================== */
+$main-color: #2a1f0f !default;
+$accent-color: #e61052 !default;
+$dark-color: #97866f !default;
+$bright-color: #eae2d7 !default;
+$very-bright-color: #fff !default;
+
+/* Font definitions =================================================================== */
+$primary-font: 'Lato', Helvetica, sans-serif !default;
+$secondary-font: 'Oswald', Helvetica, sans-serif !default;
+$main-font-size: 1.2rem !default;
+$font-line-height: 1.2 !default;
+
+/* Z-indexes ========================================================================== */
+$zindex-base: 1 !default;

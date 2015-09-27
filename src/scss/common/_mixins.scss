@@ -1,0 +1,110 @@
+
+/* ====================================================================================
+ *  Project: Test Project
+ *  Author: Andrzej Kałowski
+ *  $id: mixins.scss
+ *  =================================================================================== */
+
+/* Devices ============================================================================ */
+$phone-width: 768px;
+$tablet-width: 992px;
+$desktop-width: 1200px;
+
+@mixin only-phone {
+  @media (max-width: #{$phone-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin up-phone {
+  @media (min-width: #{$phone-width}) {
+    @content;
+  }
+}
+
+@mixin only-tablet {
+  @media (min-width: #{$phone-width}) and (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin only-up-tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+/* Border redius ====================================================================== */
+@mixin border-radius-mix($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin border-top-radius($radius) {
+  -webkit-border-top-left-radius: $radius;
+  -moz-border-top-left-radius: $radius;
+  -ms-border-top-left-radius: $radius;
+  -o-border-top-left-radius: $radius;
+  border-top-left-radius: $radius;
+  -webkit-border-top-right-radius: $radius;
+  -moz-border-top-right-radius: $radius;
+  -ms-border-top-right-radius: $radius;
+  -o-border-top-right-radius: $radius;
+  border-top-right-radius: $radius;
+}
+
+@mixin border-top-left-radius($radius) {
+  -webkit-border-top-left-radius: $radius;
+  -moz-border-top-left-radius: $radius;
+  -ms-border-top-left-radius: $radius;
+  -o-border-top-left-radius: $radius;
+  border-top-left-radius: $radius; 
+}
+
+@mixin border-top-right-radius($radius) {
+  -webkit-border-top-right-radius: $radius;
+  -moz-border-top-right-radius: $radius;
+  -ms-border-top-right-radius: $radius;
+  -o-border-top-right-radius: $radius;
+  border-top-right-radius: $radius; 
+}
+
+/* Dotted lines ======================================================================= */
+@mixin dotted-horizontal-line($dots-color: $bright-color, $spaces-color: $very-bright-color) {
+  background-image: -webkit-linear-gradient(to right, $dots-color 30%, $spaces-color 0%);
+  background-image: -moz-linear-gradient(to right, $dots-color 30%, $spaces-color 0%);
+  background-image: -ms-linear-gradient(to right, $dots-color 30%, $spaces-color 0%);
+  background-image: -o-linear-gradient(to right, $dots-color 30%, $spaces-color 0%);
+  background-image: linear-gradient(to right, $dots-color 30%, $spaces-color 0%);
+  background-position: bottom;
+  -webkit-background-size: 5px 1px;
+  -moz-background-size: 5px 1px;
+  -ms-background-size: 5px 1px;
+  -o-background-size: 5px 1px;
+  background-size: 5px 1px;
+  background-repeat: repeat-x;
+}
+
+@mixin dotted-vertical-line($dots-color: $bright-color, $spaces-color: $very-bright-color) {
+  background-image: -webkit-linear-gradient($dots-color 30%, $spaces-color 0%);
+  background-image: -moz-linear-gradient($dots-color 30%, $spaces-color 0%);
+  background-image: -ms-linear-gradient($dots-color 30%, $spaces-color 0%);
+  background-image: -o-linear-gradient($dots-color 30%, $spaces-color 0%);
+  background-image: linear-gradient($dots-color 30%, $spaces-color 0%);
+  background-position: right;
+  -webkit-background-size: 1px 5px;
+  -moz-background-size: 1px 5px;
+  -ms-background-size: 1px 5px;
+  -o-background-size: 1px 5px;
+  background-size: 1px 5px;
+  background-repeat: repeat-y;
+}

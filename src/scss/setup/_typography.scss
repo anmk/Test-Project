@@ -1,0 +1,59 @@
+/* ====================================================================================
+ *  Project: Test Project
+ *  Author: Andrzej Kałowski
+ *  $id: typography.scss
+ *  =================================================================================== */
+
+/* Typography ========================================================================= */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $dark-color;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 6rem;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 4rem;
+  font-weight: normal;
+  line-height: 6rem;
+}
+
+h3 {
+  font-size: 2.5rem;
+  font-weight: normal;
+  line-height: 3rem;
+}
+
+h4 {
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 2rem;
+}
+
+h5 {
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 1.6rem;
+}
+
+h6 {
+  font-size: $main-font-size;
+  font-weight: normal;
+  line-height: $font-line-height;
+  color: $dark-color;
+}
+
+p {
+  font-size: $main-font-size;
+  font-weight: normal;
+  line-height: $font-line-height;
+  color: $dark-color;
+}

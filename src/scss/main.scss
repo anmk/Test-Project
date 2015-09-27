@@ -1,0 +1,51 @@
+/* =========================================================================
+ *   Project: Test Project
+ *   Author: Andrzej Kałowski
+ *   $id: main.scss
+ *   Last updated: @@timestamp
+ *  ========================================================================= */
+
+// Authored Dependencies
+@import "setup/variables";
+@import "setup/typography";
+@import "setup/mixins";
+
+// Overwritten Bootstrap variables
+@import "vendor/bootstrap/variables";
+
+/* =========================================================================
+   Bootstrap
+   ========================================================================= */
+
+// Core Bootstrap variables and mixins
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+// Reset and dependencies
+@import "bootstrap/normalize";
+@import "bootstrap/print";
+
+// Core CSS
+@import "bootstrap/scaffolding";
+@import "bootstrap/type";
+@import "bootstrap/code";
+@import "bootstrap/grid";
+@import "bootstrap/tables";
+@import "bootstrap/forms";
+@import "bootstrap/buttons";
+@import "bootstrap/utilities";
+@import "bootstrap/responsive-utilities";
+
+/* =========================================================================
+   Custom Styling
+   ========================================================================= */
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
+// Common styles & layouts
+@import "common/layout";
+
+// Components
+@import "vendor/colorbox";
