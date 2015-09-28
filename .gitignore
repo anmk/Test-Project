@@ -34,7 +34,6 @@ nbproject
 node_modules
 bower_components
 dist
-grunt
 designs
 fonts
 media
