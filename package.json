@@ -31,6 +31,6 @@
     "grunt-svg2png": "^0.2.7",
     "time-grunt": "^1.2.1",
     "jit-grunt": "0.9.1",
-    "lodash": "^3.10.0"
+    "lodash": "^4.17.19"
   }
 }
